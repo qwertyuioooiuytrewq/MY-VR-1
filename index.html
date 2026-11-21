@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>全面灰色の部屋 VR</title>
+    <title>部屋 VR</title>
     <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
       <!-- 部屋の外側・背景も灰色に統一 -->
-      <a-sky color="#808080"></a-sky>
+      <a-sky color="rgb(259, 230, 200)"></a-sky>
 
       <!-- 部屋全体を囲むボックス（内側から見えるように side="back" を指定） -->
       <!-- 中心を y="1.5"、高さを "3" にすることで床 y="0" 〜 天井 y="3" になる -->
       <a-box
         position="0 1.5 0"
-        width="6"
-        height="3"
-        depth="6"
-        color="#808080"
+        width="9"
+        height="7"
+        depth="8"
+        color="rgb(225, 205, 175)"
         material="side: back; roughness: 0.9"
       ></a-box>
 
@@ -26,14 +26,42 @@
       <a-plane
         position="0 0.01 0"
         rotation="-90 0 0"
-        width="6"
-        height="6"
-        color="#7A7A7A"
+        width="9"
+        height="9"
+        color="rgb(212, 190, 158)"
         material="roughness: 0.95"
       ></a-plane>
+      
+       <!-- 窓枠 -->
+       <a-plane
+        position="-1 0 -3.9"
+        rotation="0 0 0"
+        width="4.4"
+        height="8.6"
+        color="rgb(154, 154, 154)"
+        material="roughness: 0.95"
+      ></a-plane>
+      <!-- 窓 -->
+       <a-plane
+        position="-2.0 2.15 -3.8"
+        rotation="0 0 0"
+        width="2"
+        height="4"
+        color="rgb(225, 242, 245)"
+        material="roughness: 0.95"
+      ></a-plane>
+       <a-plane
+        position="0.05 2.15 -3.8"
+        rotation="0 0 0"
+        width="2"
+        height="4"
+        color="rgb(225, 242, 245)"
+        material="roughness: 0.95"
+      ></a-plane>
+     
 
       <!-- 視点（人の目線の高さ約1.6m・部屋の中央） -->
-      <a-entity position="0 1.6 0">
+      <a-entity position="0 1.0 1.5">
         <a-camera></a-camera>
       </a-entity>
     </a-scene>
