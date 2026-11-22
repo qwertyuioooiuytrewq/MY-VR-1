@@ -9,8 +9,10 @@
   <body>
     <a-scene>
       <!-- 部屋の外側・背景も灰色に統一 -->
-      <a-sky src="walnut_black.jpg"
-        color="rgb(230, 230, 230)"></a-sky>
+      <a-sky src="wallpaper.jpg"
+        color="rgb(230, 230, 230)"
+        material="repeat: 4 4; roughness: 0.85"
+        ></a-sky>
 
       <!-- 部屋全体を囲むボックス（内側から見えるように side="back" を指定） -->
       <!-- 中心を y="1.5"、高さを "3" にすることで床 y="0" 〜 天井 y="3" になる -->
