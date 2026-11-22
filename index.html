@@ -28,8 +28,9 @@
         rotation="-90 0 0"
         width="9"
         height="9"
+        src="walnut_black.jpg"
         color="rgb(205, 205, 205)"
-        material="roughness: 0.95"
+        material="repeat: 4 4; roughness: 0.85"
       ></a-plane>
       
        <!-- 窓枠 -->
@@ -259,6 +260,52 @@
           depth="0.32"
           color="rgb(152, 112, 75)"
           material="roughness: 0.85"
+        ></a-box>
+      </a-entity>
+      <!-- 簡単なテレビとテレビ台 -->
+      <a-entity
+        position="-4.0 0 1.6"
+        rotation="0 90 0"
+        scale="2.0 2.0 2.0"
+      >
+        <!-- テレビ台本体（高さ 0.4m、中心 Y=0.2m で床 y=0 に接する） -->
+        <a-box
+          position="0 0.2 0"
+          width="1.4"
+          height="0.4"
+          depth="0.42"
+          color="rgb(40, 40, 40)"
+          material="roughness: 0.9"
+        ></a-box>
+
+        <!-- テレビのスタンド（テレビ台の上面 y=0.4m の上に置く） -->
+        <a-box
+          position="0 0.43 0"
+          width="0.32"
+          height="0.06"
+          depth="0.2"
+          color="rgb(70, 72, 76)"
+          material="roughness: 0.7"
+        ></a-box>
+
+        <!-- テレビの枠（ベゼル） -->
+        <a-box
+          position="0 0.82 0"
+          width="1.2"
+          height="0.68"
+          depth="0.05"
+          color="rgb(45, 47, 50)"
+          material="roughness: 0.75"
+        ></a-box>
+
+        <!-- テレビの画面（枠の前面 z=+0.025 よりわずかに前に出して表示） -->
+        <a-box
+          position="0 0.82 0.028"
+          width="1.12"
+          height="0.6"
+          depth="0.01"
+          color="rgb(95, 130, 165)"
+          material="roughness: 0.4"
         ></a-box>
       </a-entity>
 
